@@ -1,0 +1,108 @@
+#pic {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+#title {
+  position: absolute;
+  top: 70%;
+  left: 80%;
+  bottom: -20%;
+  transform:translate(-50%, -50%);
+  font-size: 40px;
+  font-family: 'Heebo', sans-serif;
+  letter-spacing: 5px;
+  color: white;
+  text-align: center;
+
+}
+
+@font-face{
+  font-family: Gliscor Gothic;
+  src: url(gligoth.ttf);
+}
+
+
+.h1 {
+  font-family: Gliscor Gothic;
+  text-transform: uppercase;
+  font-size: 46px;
+}
+
+@font-face {
+  font-family: Gotham;
+  src: url(gotham-thin.otf);
+
+}
+
+#what {
+height: 150px;
+width: 100%;
+position: absolute;
+top: 657px;
+/* left: 540px; */
+padding-top: 10px;
+padding-bottom: 10px;
+/* padding-left: 30px; */
+font-family: Gotham;
+font-weight: bolder;
+font-size: 20px;
+background-color: #E5DACE;
+color: #495F77;
+text-align: center;
+}
+
+#who {
+  height: 180px;
+  width: 100%;
+  position: absolute;
+  top: 790px;
+  /* left: 540px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* padding-left: 30px; */
+  font-family: Gotham;
+  font-weight: bolder;
+  font-size: 20px;
+  color: #E5DACE;
+  text-align: center;
+  background-color: #495F77;
+}
+
+#why {
+height: 190px;
+width: 100%;
+position: absolute;
+bottom: -415px;
+/* left: 540px; */
+padding-top: 10px;
+padding-bottom: 10px;
+/* padding-left: 30px; */
+font-family: Gotham;
+font-weight: bolder;
+font-size: 20px;
+background-color: #E5DACE;
+color: #495F77;
+text-align: center;
+}
+
+#w2h {
+height: 220px;
+width: 100%;
+position: absolute;
+bottom: -635px;
+/* left: 540px; */
+padding-top: 10px;
+padding-bottom: 10px;
+/* padding-left: 30px; */
+font-family: Gotham;
+font-weight: bolder;
+font-size: 20px;
+background-color: #495F77;
+color: #E5DACE;
+text-align: center;
+}

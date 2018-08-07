@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<title>forums</title>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" href="forums.css">
+</head>
+
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<a class="navbar-brand" href="index.html">EUNOIA</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+ <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+ <ul class="navbar-nav mr-auto">
+   <li class="nav-item dropdown">
+     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       mental illnesses
+     </a>
+     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+       <a class="dropdown-item" href="depression.html">depression</a>
+       <a class="dropdown-item" href="anxiety.html">anxiety and stress</a>
+       <a class="dropdown-item" href="eatingdisorder.html">eating disorders</a>
+       <a class="dropdown-item" href="bipolar.html">bipolar disorder</a>
+       <a class="dropdown-item" href="helpothers.html">how to help others</a>
+     </div>
+   </li>
+   <li class="nav-item dropdown">
+     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+       self-care
+     </a>
+     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+       <a class="dropdown-item" href="5ws.html">the 5 w's + how</a>
+       <a class="dropdown-item" href="physical.html">physical</a>
+       <a class="dropdown-item" href="social.html">emotional + social</a>
+     </div>
+   </li>
+   <li class="nav-item active">
+     <a class="nav-link" href="aboutus.html">about us<span class="sr-only">(current)</span></a>
+   </li>
+   <li class="nav-item active">
+     <a class="nav-link" href="forums.html">forums<span class="sr-only">(current)</span></a>
+   </li>
+   <li class="nav-item active">
+     <a class="nav-link" href="breakingthestigma.html">breaking the stigma<span class="sr-only">(current)</span></a>
+   </li>
+   <li class="nav-item active">
+     <a class="nav-link" href="contactus.html">contact us<span class="sr-only">(current)</span></a>
+   </li>
+ </ul>
+</nav>
+
+<div id = "background"></div>
+<div id = "water"><img src= "water.jpeg" class="introPart"></div>
+<div class="centeredtext">welcome to our forum<div id = "intro">
+  We want to provide a space in which anyone can discuss topics that are not common for them to discuss. Feel free to share your thoughts on any of the following topics. Please be cognisant of others and do not say anything harsh or hurtful.
+</div></div>
+
+<div class= "sidenav">
+  <p id = "menuName"><Strong> Topics</Strong></p>
+  <a href = "#story">Share your story</a>
+  <a href = "#questions">Questions</a>
+  <a href = "#increasing">Increasing Awareness</a>
+  <a href = "#health">Health</a>
+  <a href = "#random">Random</a>
+</div>
+
+<br>
+		<div>
+				<h3 id = "story">Share Your Story</h3>
+				<h2>Name:  <textarea id="name" placeholder="Type your name here"></textarea> </h2>
+				<br>
+				<h1>Comment:  <textarea id="comment" placeholder="Type your comment here"></textarea>  </h1>
+				<br>
+				<button id = "submit" onclick="myFunction()">Submit</button>
+				<p id="prev_comments"></p>
+
+				<script>
+						//localStorage.clear();
+						Parser();
+						function myFunction(){
+							var jsonData = {};
+							jsonData["name"] = document.getElementById("name").value;
+							jsonData["comment"] = document.getElementById("comment").value;
+							document.getElementById("prev_comments").innerHTML = document.getElementById("prev_comments").innerHTML+"<br>"+ "Name: " +jsonData["name"]+"<br>"+ "Commment: " +jsonData["comment"]+"<br>";
+							var x =JSON.stringify(jsonData);
+							var n = localStorage.getItem("comments");
+							if (n === null){
+								n=x;
+							}
+							else{
+								n=n+x;
+							}
+							n=n+"+";
+							localStorage.setItem("comments", n);
+					 }
+
+					function Parser(){
+						var string=localStorage.getItem("comments");
+						if(string!=null){
+							var com_list=string.split("+");
+							for (var i = 0; i < com_list.length; i++) {
+								var obj=JSON.parse(com_list[i]);
+								document.getElementById("prev_comments").innerHTML = document.getElementById("prev_comments").innerHTML+"<br>"+ "Name: " +obj["name"]+"<br>"+ "Comment: " +obj["comment"]+"<br>";
+							}
+						}
+				 }
+			</script>
+		</div>
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+		<div>
+				<h3 id = "questions">Questions</h3>
+				<h2>Name:  <textarea id="name2" placeholder="Type your name here"></textarea> </h2>
+				<br>
+				<h1>Comment:  <textarea id="comment2" placeholder="Type your comment here"></textarea>  </h1>
+				<br>
+				<button id = "submit2" onclick="myFunction2()">Submit</button>
+				<p id="prev_comments2"></p>
+
+				<script>
+						// localStorage.clear();
+						Parser();
+						function myFunction2(){
+							var jsonData = {};
+							jsonData["name2"] = document.getElementById("name2").value;
+							jsonData["comment2"] = document.getElementById("comment2").value;
+							document.getElementById("prev_comments2").innerHTML = document.getElementById("prev_comments2").innerHTML+"<br>"+ "Name: " +jsonData["name2"]+"<br>"+ "Commment:" +jsonData["comment2"]+"<br>";
+							var x =JSON.stringify(jsonData);
+							var n = localStorage.getItem("comments");
+							if (n === null){
+								n=x;
+							}
+							else{
+								n=n+x;
+							}
+							n=n+"+";
+							localStorage.setItem("comments", n);
+					 }
+
+					function Parser(){
+						var string=localStorage.getItem("comments");
+						if(string!=null){
+							var com_list=string.split("+");
+							for (var i = 0; i < com_list.length; i++) {
+								var obj=JSON.parse(com_list[i]);
+								document.getElementById("prev_comments2").innerHTML = document.getElementById("prev_comments2").innerHTML+"<br>"+ "Name: " +obj["name2"]+"<br>"+ "Comment: " +obj["comment2"]+"<br>";
+							}
+						}
+				 }
+			</script>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div>
+				<h3 id = "increasing">Increasing Awareness</h3>
+				<h2>Name:  <textarea id="name3" placeholder="Type your name here"></textarea> </h2>
+				<br>
+				<h1>Comment:  <textarea id="comment3" placeholder="Type your comment here"></textarea>  </h1>
+				<br>
+				<button id = "submit3" onclick="myFunction3()">Submit</button>
+				<p id="prev_comments3"></p>
+
+				<script>
+						// localStorage.clear();
+						Parser();
+						function myFunction3(){
+							var jsonData = {};
+							jsonData["name3"] = document.getElementById("name3").value;
+							jsonData["comment3"] = document.getElementById("comment3").value;
+							document.getElementById("prev_comments3").innerHTML = document.getElementById("prev_comments3").innerHTML+"<br>"+ "Name: " +jsonData["name3"]+"<br>"+ "Commment:" +jsonData["comment3"]+"<br>";
+							var x =JSON.stringify(jsonData);
+							var n = localStorage.getItem("comments");
+							if (n === null){
+								n=x;
+							}
+							else{
+								n=n+x;
+							}
+							n=n+"+";
+							localStorage.setItem("comments", n);
+					 }
+
+					function Parser(){
+						var string=localStorage.getItem("comments");
+						if(string!=null){
+							var com_list=string.split("+");
+							for (var i = 0; i < com_list.length; i++) {
+								var obj=JSON.parse(com_list[i]);
+								document.getElementById("prev_comments3").innerHTML = document.getElementById("prev_comments3").innerHTML+"<br>"+ "Name: " +obj["name3"]+"<br>"+ "Comment: " +obj["comment3"]+"<br>";
+							}
+						}
+				 }
+			</script>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div>
+				<h3 id = "health">Health</h3>
+				<h2>Name:  <textarea id="name4" placeholder="Type your name here"></textarea> </h2>
+				<br>
+				<h1>Comment:  <textarea id="comment4" placeholder="Type your comment here"></textarea>  </h1>
+				<br>
+				<button id = "submit4" onclick="myFunction4()">Submit</button>
+				<p id="prev_comments4"></p>
+
+				<script>
+						//localStorage.clear();
+						Parser();
+						function myFunction4(){
+							var jsonData = {};
+							jsonData["name4"] = document.getElementById("name4").value;
+							jsonData["comment4"] = document.getElementById("comment4").value;
+							document.getElementById("prev_comments4").innerHTML = document.getElementById("prev_comments4").innerHTML+"<br>"+ "Name: " +jsonData["name4"]+"<br>"+ "Commment:" +jsonData["comment4"]+"<br>";
+							var x =JSON.stringify(jsonData);
+							var n = localStorage.getItem("comments");
+							if (n === null){
+								n=x;
+							}
+							else{
+								n=n+x;
+							}
+							n=n+"+";
+							localStorage.setItem("comments", n);
+					 }
+
+					function Parser(){
+						var string=localStorage.getItem("comments");
+						if(string!=null){
+							var com_list=string.split("+");
+							for (var i = 0; i < com_list.length; i++) {
+								var obj=JSON.parse(com_list[i]);
+								document.getElementById("prev_comments4").innerHTML = document.getElementById("prev_comments4").innerHTML+"<br>"+ "Name: " +obj["name4"]+"<br>"+ "Comment: " +obj["comment4"]+"<br>";
+							}
+						}
+				 }
+			</script>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div>
+				<h3 id = "random">Random</h3>
+				<h2>Name:  <textarea id="name5" placeholder="Type your name here"></textarea> </h2>
+				<br>
+				<h1>Comment:  <textarea id="comment5" placeholder="Type your comment here"></textarea>  </h1>
+				<br>
+				<button id = "submit5" onclick="myFunction5()">Submit</button>
+				<p id="prev_comments5"></p>
+
+				<script>
+						//localStorage.clear();
+						Parser();
+						function myFunction5(){
+							var jsonData = {};
+							jsonData["name5"] = document.getElementById("name5").value;
+							jsonData["comment5"] = document.getElementById("comment5").value;
+							document.getElementById("prev_comments5").innerHTML = document.getElementById("prev_comments5").innerHTML+"<br>"+ "Name: " +jsonData["name5"]+"<br>"+ "Commment:" +jsonData["comment5"]+"<br>";
+							var x =JSON.stringify(jsonData);
+							var n = localStorage.getItem("comments5");
+							if (n === null){
+								n=x;
+							}
+							else{
+								n=n+x;
+							}
+							n=n+"+";
+							localStorage.setItem("comments", n);
+					 }
+
+					function Parser(){
+						var string=localStorage.getItem("comments");
+						if(string!=null){
+							var com_list=string.split("+");
+							for (var i = 0; i < com_list.length; i++) {
+								var obj=JSON.parse(com_list[i]);
+								document.getElementById("prev_comments5").innerHTML = document.getElementById("prev_comments5").innerHTML+"<br>"+ "Name: " +obj["name5"]+"<br>"+ "Comment: " +obj["comment5"]+"<br>";
+							}
+						}
+				 }
+			</script>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+
+
+
+	</body>

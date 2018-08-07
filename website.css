@@ -1,0 +1,197 @@
+h1{
+font-family: 'Crimson Text', serif;
+color:#BBCBD2;
+font-size: 75px;
+text-align: center;
+vertical-align: top;
+}
+h3{
+font-family: 'Crimson Text', serif;
+color:#BBCBD2;
+font-size: 40px;
+text-align: center;
+top: 30px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.centeredtext {
+position: absolute;
+top: 69%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size:35px;
+font-family: 'Heebo', sans-serif;
+letter-spacing:5px;
+color: #495F77;
+text-align: center;
+}
+
+#cover{
+width: 100%;
+height: 100%;
+}
+
+#siteInfo {
+  font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: "futura-pt";
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-style: normal;
+  color: rgba(255,255,255,.9);
+  text-align: center;
+  line-height: 100px;
+
+}
+
+.center-navigation--info #siteInfo {
+  text-align: center;
+}
+
+
+
+#footer {
+  background-color: #A9A9A9;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+*::selection {
+  background-color: #000;
+  color: #666666;
+}
+
+.footer-inner {
+height: 100px;
+width: 100%
+background-color: #666666;
+}
+
+#title {
+font-family:'Crimson Text', serif;
+color:#BBCBD2;
+font-size: 100px;
+text-align: center;
+vertical-align: top;
+}
+#message {
+font-family: 'Playfair Display', serif;
+color:#6D7973;
+font-style: italic;
+font-size: 70px;
+text-align: center;
+vertical-align: top;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.navbar-nav > li {
+ padding-left: 10px;
+ padding-right: 10px;
+}
+
+#purpose {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color:#6D7973;
+  font-style: italic;
+}
+
+h3{
+font-family: 'Crimson Text', serif;
+color:#BBCBD2;
+font-size: 25px;
+text-align: center;
+padding-top: 47px;
+padding-bottom: 20px;
+}
+
+.golden{
+  display: inline-block;
+  padding-top: 60px;
+  height: 325px;
+  width: 500px;
+  padding-right: 60px;
+  padding-left:;
+  padding-bottom: 30px;
+}
+.glass{
+  display: inline-block;
+  padding-top: 60px;
+  height: 325px;
+  width: 500px;
+  padding-right:;
+  padding-left: 80px;
+  padding-bottom: 35px;
+}
+#images{
+  text-align:center;
+}
+.about{
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  padding-left: 325px;
+  padding-bottom: 100px;
+}
+.stigma{
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  padding-left: 455px;
+  padding-bottom: 100px;
+}
+.purpose{
+  font-family: 'Crimson Text', serif;
+  color:#BBCBD2;
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+a {
+  color: grey;
+}
+
+a:hover{
+  color: black;
+}

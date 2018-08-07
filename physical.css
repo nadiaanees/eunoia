@@ -1,0 +1,219 @@
+@font-face{
+  font-family: Gliscor Gothic;
+  src: url(gligoth.ttf);
+}
+
+@font-face {
+  font-family: Gotham;
+  src: url(gotham-thin.otf);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  filter: grayscale(30%);
+}
+.centeredtext {
+position: absolute;
+top: 24%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size:35px;
+font-family: 'Heebo', sans-serif;
+letter-spacing:5px;
+color: #495F77;
+text-align: center;
+}
+
+.h1 {
+    font-family: Gliscor Gothic;
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+#beauty{
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 670px;
+  /* left: 540px; */
+  padding-top: 10px;
+  /* padding-left: 30px; */
+  font-family: Playfair Display;
+  font-weight: bolder;
+  font-size: 40px;
+  background-color: #F2E6EA;
+  color: #495F77;
+  text-align: center;
+}
+
+
+
+p {
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+#beautyp {
+  text-align: left;
+  position: absolute;
+  width: 60%;
+  height: auto;
+  top: 770px;
+  padding-top: 10px;
+  padding-left: 15px;
+  font-family: Gotham;
+  font-size: 20px;
+}
+
+#fitness {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 1500px;
+  /* left: 540px; */
+  padding-top: 10px;
+  /* padding-left: 30px; */
+  font-family: Playfair Display;
+  font-weight: bolder;
+  font-size: 40px;
+  background-color: #F2E6EA;
+  color: #495F77;
+  text-align: center;
+}
+
+#fitnessp {
+  text-align: left;
+  position: absolute;
+  width: 60%;
+  height: auto;
+  top: 1600px;
+  padding-top: 10px;
+  padding-left: 15px;
+  font-family: Gotham;
+  font-size: 20px;
+}
+
+#nutrition {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 2280px;
+  /* left: 540px; */
+  padding-top: 10px;
+  /* padding-left: 30px; */
+  font-family: Playfair Display;
+  font-weight: bolder;
+  font-size: 40px;
+  background-color: #F2E6EA;
+  color: #495F77;
+  text-align: center;
+}
+
+#nutritionp {
+  text-align: left;
+  position: absolute;
+  width: 60%;
+  height: auto;
+  top: 2380px;
+  padding-top: 10px;
+  padding-left: 15px;
+  font-family: Gotham;
+  font-size: 20px;
+}
+
+#honey {
+  position: absolute;
+  display: inline-block;
+  /* box-shadow: 18px 18px #3F3931; */
+  top: 790px;
+  left: 890px;
+  width: 300px;
+  height: auto;
+}
+
+#mud {
+  position: absolute;
+  display: inline-block;
+  /* box-shadow: 18px 18px #3F3931; */
+  bottom: -500px;
+  left: 890px;
+  width: 300px;
+  height: auto;
+}
+
+#avocado {
+  position: absolute;
+  display: inline-block;
+  /* box-shadow: 18px 18px #3F3931; */
+  bottom: -735px;
+  left: 890px;
+  width: 300px;
+  height: auto;
+}
+
+a {
+  color: grey;
+}
+
+a:hover {
+  color: #BBCBD2;
+}
+
+#fitvid {
+  position: absolute;
+  top: 1620px;
+  left: 800px;
+}
+
+#fitvid2 {
+    position: absolute;
+    top: 1950px;
+    left: 800px;
+}
+
+#food1 {
+  position: absolute;
+  display: inline-block;
+  /* box-shadow: 18px 18px #3F3931; */
+  top: 2400px;
+  left: 890px;
+  width: 300px;
+  height: auto;
+}
+
+#food2 {
+    position: absolute;
+    display: inline-block;
+    /* box-shadow: 18px 18px #3F3931; */
+    top: 2625px;
+    left: 890px;
+    width: 300px;
+    height: auto;
+    paddin
+}
+
+#sources{
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-bottom: 20px;
+  position: relative;
+  top: 2155px;
+  font-family: Playfair Display;
+  font-weight: bolder;
+  font-size: 14px;
+  border-style: solid;
+  border-width: thin;
+  border-color: #000000;
+  color: black;
+}

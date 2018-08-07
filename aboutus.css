@@ -1,0 +1,113 @@
+@font-face {
+ font-family: Gotham;
+ src: url(gotham-thin.otf);
+}
+
+@font-face {
+  font-family: Gliscor Gothic;
+  src: url(gligoth.ttf);
+}
+
+
+#purpose {
+  background-color: #bad1e2;
+  font-family: Gotham;
+  color:#696969;
+  font-size: 30px;
+  text-align: center;
+  vertical-align: top;
+  }
+
+#nadia {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  float: right;
+
+ }
+
+ #blain {
+   width: 200px;
+   height: 200px;
+   display: inline-block;
+   float: right;
+   line-height: 1.5;
+  }
+
+  #mia {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    float: right;
+    line-height: 1.5;
+   }
+
+   #huda {
+     width: 200px;
+     height: 200px;
+     display: inline-block;
+     float: right;
+     line-height: 1.5;
+    }
+
+    h1{
+    font-family: 'Heebo', sans-serif;
+    color:#ECEAEA;
+    font-size: 65px;
+    letter-spacing: 5px;
+    text-align: center;
+    vertical-align: top;
+
+    }
+
+    h2{
+    font-family: Gliscor Gothic;
+    color:white;
+    font-size: 60px;
+    text-align: center;
+    vertical-align: top;
+    padding-top: 10px;
+    text-transform: uppercase;
+    }
+
+    h3{
+    font-family: Gotham;
+    color:black;
+    font-size: 18px;
+    float: left;
+    vertical-align: top;
+    line-height: 1.5;
+    }
+
+    h5 {
+      font-family: Gotham;
+      color:white;
+      font-size: 20px;
+      text-align: center;
+      margin-right: 60px;
+      margin-left: 60px;
+    }
+
+    .row {
+      /* background-color: #F8F9FA; */
+      margin-right: 0px;
+      padding-bottom: 30px;
+      padding-right: 58px;
+    }
+
+    #mias {
+    }
+
+    #hudas {
+    }
+
+    #bridge{
+      height: auto;
+      width: 100%
+    }
+
+    .bottom-right {
+    position: absolute;
+    bottom: 500px;
+    right: 180px;
+  }
